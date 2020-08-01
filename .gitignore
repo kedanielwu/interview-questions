@@ -1,0 +1,24 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+report.html
+/report
+*.snap
+
+# production
+/build
+tjn-kurve/index.*
+tjn-kurve-dev/index.*
+tjn-kurve-dev/customColumnCalculator.*
+/tri-reporting
+webViewSync.versions.json
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode

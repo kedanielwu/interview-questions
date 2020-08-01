@@ -1,0 +1,13 @@
+
+# jest file
+*.test.js
+/src/sandbox/
+/src/tests/
+/mocks/
+/public/
+/node_modules/
+/coverage/
+*.config.js
+/src/registerServiceWorker.js
+/config
+/devServer

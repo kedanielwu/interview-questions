@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React App</title>
+    <style>
+        @font-face {
+          font-family: 'Lato';
+          src: url("./assets/fonts/Lato/Lato-Regular.ttf");
+          font-weight: 400;
+        }
+      
+        @font-face {
+          font-family: 'Lato';
+          src: url('./assets/fonts/Lato/Lato-Bold.ttf');
+          font-weight: 700;
+        }
+        @font-face {
+          font-family: 'Roboto';
+          src: url('./assets/fonts/Roboto/Roboto-Regular.ttf');
+          font-weight: 400;
+        }
+      
+        @font-face {
+          font-family: 'Roboto';
+          src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
+          font-weight: 700; 
+        } 
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<% for (var chunk in htmlWebpackPlugin.files.css) { %>
+<link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[chunk] %>">
+<% } %>
+<% for (var chunk in htmlWebpackPlugin.files.js) { %>
+<script src="<%= htmlWebpackPlugin.files.js[chunk] %>"></script>
+<% } %>
+</html>
