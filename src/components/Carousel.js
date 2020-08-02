@@ -60,7 +60,7 @@ const Carousel = (props) => {
     <div className='carousel-container'>
       <Arrow dir='left' onClick={handleLeftClick} />
       <div className='carousel-area'>
-        <Items imgs={props.imgs} current={currentIndex} ></Items>
+        <Items imgs={props.imgs} current={currentIndex}></Items>
       </div>
       <Arrow dir='right' onClick={handleRightClick} />
     </div>
