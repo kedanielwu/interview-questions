@@ -5,6 +5,13 @@ import CenterElement from './components/CenterElement';
 import Timer from './components/Timer';
 import LeftRightLayout from './components/LeftRightLayout';
 import CopyText from './components/CopyText';
+import AComponent from './components/AComponent';
+import HoverTooltip from './components/HoverTooltip';
+import Virtualized from './components/Virtualized';
+import message from './components/message';
+import Folder from './components/Folder';
+import Three from './components/Three';
+
 import './App.less';
 
 const IMG_LIST = [
@@ -21,6 +28,34 @@ const IMG_LIST = [
     alt: 'image3'
   },
 ];
+
+const FOLDER_PATH = [{
+  'name': 'root',
+  'children': [
+    {
+      'name': 'folder 1',
+      'children': [],
+    },
+    {
+      'name': 'folder 2',
+      'children': [
+        {
+          'name': 'folder 2-1',
+          'children': [
+            {
+              'name': 'folder 2-1-1',
+              'children': []
+            }
+          ]
+        }
+      ],
+    },
+    {
+      'name': 'folder 3',
+      'children': []
+    }
+  ]
+}];
 function App(){
   return (
     <div id="app">
@@ -54,6 +89,44 @@ function App(){
             {'Copy Text'}
           </h4>
           <CopyText />
+        </div>
+        <div className='item'>
+          <h4>
+            {'A Component'}
+          </h4>
+          <AComponent />
+        </div>
+        {/* <div className='item'>
+          <h4>
+            {'Hovertooltip'}
+          </h4>
+          <HoverTooltip />
+        </div> */}
+        <div className='item'>
+          <h4>
+            {'message'}
+          </h4>
+          <button onClick={() => { message('test message'); }}>
+            {'click to show'}
+          </button>
+        </div>
+        {/* <div className='item'>
+          <h4>
+            {'Virtualized Table'}
+          </h4>
+          <Virtualized />
+        </div> */}
+        <div className='item'>
+          <h4>
+            {'folder'}
+          </h4>
+          <Folder src={FOLDER_PATH} />
+        </div>
+        <div className='item'>
+          <h4>
+            {'three by three'}
+          </h4>
+          <Three />
         </div>
         <div className='item'>
           <h4>
