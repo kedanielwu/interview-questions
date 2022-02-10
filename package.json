@@ -42,7 +42,7 @@
     "webpack-merge": "^4.2.2",
     "less-loader": "^5.0.0",
     "sass-loader": "^8.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "less": "^3.11.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
